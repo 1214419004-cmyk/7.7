@@ -13,14 +13,21 @@ function start() {
 
     document.body.appendChild(heading);
 
-    let username = prompt("What is ur name?");
+    let username = prompt("What is ur first name?");
+    let userLastname = prompt("What is ur last name?");
 
-    addName(username);
+    addName(username, userLastname);
+    
+    addSeparator();
 
 }
 
-function addName(newName) {
+function addName(newName, lastname) {
     let sixSeven = document.createElement("h2");
-    sixSeven.innerText = newName;
+    sixSeven.innerText = lastname + ", " + newName;
     document.body.appendChild(sixSeven);
+}
+function addSeparator() {
+    let lineBreak = document.createElement("hr");
+    document.body.appendChild(lineBreak);
 }
